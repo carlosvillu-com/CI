@@ -5,6 +5,10 @@
       "script": "app.js",
       "exec_mode": "cluster",
       "instances": "max",
+      "env_development": {
+        "NODE_ENV": "development",
+        "PORT": "3001"
+      },
       "env_production": {
         "NODE_ENV": "production",
         "PORT": "3000"
@@ -28,10 +32,6 @@
       "repo" : "git@github.com:carlosvillu-com/CI.git",
       "path" : "/var/www/development",
       "post-deploy" : "pm2 startOrRestart ecosystem.json --env development",
-      "env"  : {
-        "NODE_ENV": "development",
-        "PORT": "3001"
-      }
     }
   }
 }
