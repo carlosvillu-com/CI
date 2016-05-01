@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [],
   "author": "Carlos Villuendas <carlosvillu@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "4.13.4"
+    "express": "4.13.4",
+    "pmx": "0.6.1"
   },
   "devDependencies": {
     "pm2": "1.1.3"

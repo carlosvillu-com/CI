@@ -1,3 +1,6 @@
+require('pmx').init({
+  http : true
+});
 var express = require('express');
 var app = express();
 
