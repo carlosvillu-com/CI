@@ -8,6 +8,12 @@ app.get('/', function(req, res) {
   res.send('thanks nifty')
 });
 
+app.get('/long', function(req, res) {
+  setTimeout(() => {
+    res.send('Looooong thanks nifty')
+  }, 300)
+});
+
 app.get('/error', (req, res, next) => {
   next(new Error('Fail'))
 })
