@@ -5,7 +5,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function(req, res) {
-  res.send('thanks nifty')
+  res.send('thanks nifty [' + process.env.NODE_ENV + ']' )
 });
 
 app.get('/long', function(req, res) {
@@ -18,7 +18,7 @@ app.get('/error', (req, res, next) => {
   next(new Error('Fail'))
 })
 
-app.listen(3000);
+app.listen(process.env.PORT);
 
 process.on('SIGINT', function() {
 
