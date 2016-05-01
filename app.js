@@ -8,6 +8,10 @@ app.get('/', function(req, res) {
   res.send('thanks nifty')
 });
 
+app.get('/error', (req, res, next) => {
+  next(new Error('Fail'))
+})
+
 app.listen(3000);
 
 process.on('SIGINT', function() {
